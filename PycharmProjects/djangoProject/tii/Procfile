@@ -1,1 +1,1 @@
-web:gunicorn tii.wsgi
+web: gunicorn tii.wsgi
