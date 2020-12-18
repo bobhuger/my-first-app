@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TII 白皮书</title>
+    <meta name="description" content="Free bootstrap template Atlas">
+    <link rel="icon" href="{% static 'img/favicon.png' %}" sizes="32x32" type="image/png">
+    <!-- custom.css -->
+    <link rel="stylesheet" href="{% static 'css/customm.css' %}">
+    <!-- bootstrap.min.css -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%} ">
+	<!-- font-awesome -->
+    <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href=" {% static 'css/aos.css' %}">
+</head>
+
+<body>
+    <!-- banner -->
+    <div class="jumbotron jumbotron-fluid" id="banner" style="background-image: url(  {% static 'img/banner-bk.jpg' %});">
+        <div class="container text-center text-md-left">
+            <header>
+                <div class="row justify-content-between">
+                    <div class="col-2">
+                        <img src="{% static 'img/logo.png' %}" alt="logo">
+
+                </div>
+            </header>
+            <h1 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="display-3 text-white font-weight-bold my-5">
+            	TII-Chain<br>
+            	万物互联，世界从此不同
+            </h1>
+            <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="lead text-white my-4">
+                一种基于区块链 3.0 的物联网应用生态网络
+                <br> TII-Chain 创始团队.
+            </p>
+            <a href="pdf.html" data-aos="fade" data-aos-easing="linear"
+                 data-aos-duration="1000" data-aos-once="true" class="btn my-5 font-weight-bold atlas-cta cta-green">白皮书</a>
+        </div>
+    </div>
+    <!-- three-blcok -->
+    <div class="container my-5 py-2">
+        <h2 class="text-center font-weight-bold my-5">应用场景</h2>
+        <div class="row">
+            <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center">
+                <img src="{% static 'img/smart-protect-1.jpg' %}" alt="Anti-spam" class="mx-auto">
+                <h4>智能金融</h4>
+                <p>保证金融机构数据的真实性，规避信用证，公司债务和债券、贸易平台、支付汇率、合同造价、订单等造假问题，提高金融安全网络中的可跟踪性</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center">
+                <img src="{% static 'img/smart-protect-2.jpg' %}" alt="Phishing Detect" class="mx-auto">
+                <h4>智能设备</h4>
+                <p>来在智能电网、智能物流、智能家居、智能广告牌、智慧城市、军事运用等方面将得到广泛应用。</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center">
+                <img src="{% static 'img/smart-protect-3.jpg' %}" alt="Smart Scan" class="mx-auto">
+                <h4>智能制造业</h4>
+                <p>制造业的设备和系统越来越智能化，从而逐步进入完全的虚拟化世界。</p>
+            </div>
+        </div>
+    </div>
+    <!-- feature (skew background) -->
+    <div class="jumbotron jumbotron-fluid feature" id="feature-first">
+        <div class="container my-5">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
+                    <h2 class="font-weight-bold">共识机制算法架构</h2>
+                    <p class="my-4">向中心化的方向演进，因此，我们在深刻理解 DPoS 共识算法思想内核的基础上,
+                        <br> 根据 TII 的实际应用场景和当前 IOT 设备发展情况，务实地创造了一种新的共识算法，
+                        <br>我们称做“双链"（Double Chain）共识算法。</p>
+                        <br>“超级链”的主要功能是使用 dBFT/DPoS 共识算法进行出块操作以及协调下层的普通链上的节点的工作。
+                        <br>具体使用哪种共识算法主要看超级链上的节点数量，在项目早期我们使用 dBFT 算法。
+                        <br>除了“超级链”之外，整个架构中还将存在由大量不同厂商生产的各种型号 IOT 设备节点组成的普通链
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
+                    <img src="{% static 'img/fearure-1.jpg' %}" alt="Take a look inside" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- feature (green background) -->
+    <div class="jumbotron jumbotron-fluid feature" id="feature-last">
+        <div class="container">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
+                    <h2 class="font-weight-bold">计算与记账分离的“挖矿机制”</h2>
+                    <p class="my-4">
+                        IOT 设备定期把自己的工作状态打包成“节点工作汇报 TX”提交给超级链。,
+                        <br> 工作状态包括“设备启动”，“设备关闭”，“设备完成了 xxx 工作”等信息，并支持扩展。
+                        <br>在一个时间周期内，超级链上将包含了整个 TII 网络所有设备的工作记录
+                        <br>TII 会公开一个工资计算算法，这个算法的输入是这个时间周期内的全部设备工作记录
+                        <br>并将工资表在公示期内进行公示，公示期完成后，TII Chain 基金会根据该工资表进行 TII ChainToken 的发放。
+                    </p>
+                </div>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center flex-md-first">
+                    <img src="{% static 'img/fearure-2.png' %}" alt="Safe and reliable" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- price table -->
+    <div class="container my-5 py-2" id="price-table">
+        <h2 class="text-center font-weight-bold d-block mb-3"> 团队核⼼成员</h2>
+        <div class="row">
+            <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5">
+                <h4 class="my-4">商德立</h4>
+                <p class="font-weight-bold">TII CEO</p>
+                <ul class="list-unstyled">
+                    <li>国内最早期物联网研发从业者</li>
+                    <li>互联网连续创业者</li>
+                    <li>Apache Mynewt 代码贡献者</li>
+                    <li>2013 年完成国内首台微信物联网设备“印美图”的研发与应用推广</li>
+                </ul>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5 rounded" id="price-table__premium">
+                <h4 class="my-4">陈光辉</h4>
+                <p class="font-weight-bold">TII DApp 应用开发总工程师</p>
+                <ul class="list-unstyled">
+                    <li>复旦计算机软件专业</li>
+                    <li>研发项目管理、软件开发、移动互联网</li>
+                    <li>历任 CDMA 交换机开发部研发工程师、测试部长、副总经理</li>
+                    <li>2005 年加入华为，历任企业通信 MKT 部长</li>
+                </ul>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5">
+                <h4 class="my-4">Michael Zhang</h4>
+                <p class="font-weight-bold">TII DApp 技术总监</p>
+                <ul class="list-unstyled">
+                    <li>新加坡国立大学 MBA</li>
+                    <li>复旦大学本科</li>
+                    <li>在亚洲有超过 20 年 IT 管理和运营经验</li>
+                    <li>跨境贸易和供应链管理领域顶尖的专家</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- client -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-md-2 py-2 align-self-center">
+                    <img src="{% static 'img/company-logos.jpg' %}" class="mx-auto d-block">
+            </div>
+        </div>
+    </div>
+    <!-- contact -->
+
+	<!-- copyright -->
+	<div class="jumbotron jumbotron-fluid" id="copyright">
+        <div class="container">
+            <div class="row justify-content-between">
+            	<div class="col-md-6 text-dark align-self-center text-center text-md-left my-2">
+                    Copyright © TII Chain All Right Reserved.
+            </div>
+        </div>
+    </div>
+    
+    <!-- AOS -->
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script>
+      AOS.init({
+      });
+    </script>
+</body>
+
+</html>
